@@ -1,0 +1,33 @@
+<Tab>
+    <tab
+        id="@+id/tab_home"
+        activeColor="@color/colorPrimary"
+        icon="@drawable/ic_home"
+        title="Home"
+        titleSizes="10dp"
+        />
+    <tab
+        activeColor="@color/colorPrimary"
+        icon="@drawable/ic_news"
+        id="@+id/tab_news"
+        title="News"
+        titleSizes="10dp" />
+    <tab
+        activeColor="@color/colorPrimary"
+        icon="@drawable/ic_chat"
+        id="@+id/tab_chat"
+        title="Chat"
+        titleSizes="10dp" />
+    <tab
+        activeColor="@color/colorPrimary"
+        icon="@drawable/ic_history"
+        id="@+id/tab_history"
+        title="History"
+        titleSizes="10dp" />
+    <tab
+        activeColor="@color/colorPrimary"
+        icon="@drawable/ic_account"
+        id="@+id/tab_account"
+        title="Account"
+        titleSizes="10dp" />
+</Tab>
