@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1069176558424",
+    "firebase_url": "https://healthin-3cb84.firebaseio.com",
+    "project_id": "healthin-3cb84",
+    "storage_bucket": "healthin-3cb84.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1069176558424:android:43882fa87ae0f2bd",
+        "android_client_info": {
+          "package_name": "jhulang.healthin.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1069176558424-e69phhvjsqe2snf0ukrtt2qfcrn96a06.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "jhulang.healthin.com",
+            "certificate_hash": "3f3cf63dd1d52100bea8966acc61bf98f6abe7f0"
+          }
+        },
+        {
+          "client_id": "1069176558424-aaclpmcipuk190a5jd17stn09t1j7p7n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJ5Ek0bqPfAROQcf3lLBqHhXthJtQz_uU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1069176558424-aaclpmcipuk190a5jd17stn09t1j7p7n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

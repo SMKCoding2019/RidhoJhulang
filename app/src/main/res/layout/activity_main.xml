@@ -25,9 +25,9 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_gravity="bottom"
-        app:bb_tabXmlResource="@xml/buttombar"
         android:background="#fff"
-        app:bb_inActiveTabAlpha="2.0" />
+        app:bb_inActiveTabAlpha="2.0"
+        app:bb_tabXmlResource="@xml/buttombar"/>
 
     <include layout="@layout/content_main" />
 
