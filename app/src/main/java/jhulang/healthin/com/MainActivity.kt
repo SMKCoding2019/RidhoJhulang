@@ -8,7 +8,6 @@ import android.support.v7.widget.Toolbar
 import android.view.Gravity
 import android.view.Menu
 import android.view.MenuItem
-
 import com.mikepenz.materialdrawer.Drawer
 import com.mikepenz.materialdrawer.accountswitcher.AccountHeader
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem
@@ -19,11 +18,10 @@ import jhulang.healthin.com.fragment.*
 
 
 class MainActivity : AppCompatActivity() {
+
     private var navigationDrawer: Drawer.Result? = null
     private var headerNavigation: AccountHeader.Result? = null
     private var bottomBar: BottomBar? = null
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -77,6 +75,8 @@ class MainActivity : AppCompatActivity() {
                         .commit()
             }
         })
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
