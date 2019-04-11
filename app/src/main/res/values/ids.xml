@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tab_home" type="id" />
+    <item name="tab_news" type="id" />
+    <item name="tab_chat" type="id" />
+    <item name="tab_history" type="id" />
+    <item name="tab_account" type="id" />
+</resources>

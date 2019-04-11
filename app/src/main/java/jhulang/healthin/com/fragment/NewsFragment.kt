@@ -8,45 +8,61 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.WebChromeClient
+import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import android.widget.ProgressBar
 
 import jhulang.healthin.com.R
+import kotlinx.android.synthetic.main.fragment_news.*
 
 class NewsFragment : Fragment() {
 
-    private var mWebView: WebView? = null
-    private var mProgressBar: ProgressBar? = null
+    var mWebView: WebView? = null
+    val webSettings : WebSettings? = null
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        val view : View = inflater!!.inflate(R.layout.fragment_news, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_news, container, false)
 
-        val mWebView = view.findViewById(R.id.myWebView) as WebView
-        val mProgressBar= view.findViewById(R.id.progressBar) as ProgressBar
+        mWebView = view.findViewById(R.id.myWebView)
+        val webSettings = mWebView!!.settings
 
-        mProgressBar.setMax(100)
-        mWebView.loadUrl("https://health.detik.com/")
 
-        val webSettings = mWebView.getSettings()
-        webSettings.setJavaScriptEnabled(true)
-        mWebView.setWebViewClient(WebViewClient())
+        mWebView!!.webViewClient = MyWebViewClient()
+        mWebView!!.webChromeClient = WebChromeClient()
+        mWebView!!.loadUrl("https://health.detik.com/")
+
+        mWebView!!.webViewClient = object : WebViewClient() {
+            override fun onPageFinished(view: WebView?, url: String?) {
+                progressBar.visibility = View.VISIBLE
+                super.onPageFinished(view, url)
+            }
+
+            override fun onPageCommitVisible(view: WebView?, url: String?) {
+                progressBar.visibility = View.GONE
+                super.onPageCommitVisible(view, url)
+            }
+
+        }
 
         return view
     }
 
+
     private inner class MyWebViewClient : WebViewClient() {
         override fun shouldOverrideUrlLoading(view: WebView, url: String): Boolean {
             if (Uri.parse(url).host == "www.health.detik.com/") {
-
                 return false
             } else {
                 val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
                 startActivity(intent)
                 return true
             }
-
         }
+
     }
 
-}// Required empty public constructor
+}
+
+
